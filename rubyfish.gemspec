@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Yury Korolev"]
   s.email       = ["yury.korolev@gmail.com"]
   s.homepage    = "http://github.com/anjlab/rubyfish"
-  s.summary     = "A new gem templates"
+  s.summary     = "Library for doing approximate and phonetic matching of string"
   s.description = "Port of http://github.com/sunlightlabs/jellyfish"
 
   s.required_rubygems_version = ">= 1.3.6"
