@@ -18,6 +18,11 @@ describe RubyFish::LongestSubstring do
     ])
   end
 
+  it "should return longest substring" do
+    subject.longest_substring("aaaabbbbbbbbbbccc", "aabbbbbcc").should == "aabbbbb"
+    subject.longest_substring("abcdef", "arcded").should == "cde"
+  end
+
   it "should work with nils" do
     subject.distance(nil, nil).should == 0
   end
