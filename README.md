@@ -1,5 +1,5 @@
-=========
-jellyfish
+
+RubyFish
 =========
 
 RubyFish is a ruby port of python library jellyfish (http://github.com/sunlightlabs/jellyfish) for doing approximate and phonetic matching of strings.

@@ -1,5 +1,3 @@
-#require "rubyfish/awesome"
-
 module RubyFish
   autoload :Hamming, 'rubyfish/hamming'
   autoload :Levenshtein, 'rubyfish/levenshtein'
