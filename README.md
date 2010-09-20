@@ -27,6 +27,10 @@ String comparison:
   * Longest Substring
   * Longest Subsequence
 
+Phonetic encoding:  
+  
+  * Double Metaphone
+
 Example Usage
 =============
 
@@ -37,3 +41,8 @@ Example Usage
     => 0.7268518518518519
     ruby-1.9.2-p0 > RubyFish::DamerauLevenshtein.distance("rubyfish", "rubyfihs")
     => 1
+    
+    ruby-1.9.2-p0 > RubyFish::DoubleMetaphone.phonetic_code "prived"
+     => ["PRFT", nil] 
+    ruby-1.9.2-p0 > RubyFish::DoubleMetaphone.phonetic_code "privet"
+     => ["PRFT", nil]
