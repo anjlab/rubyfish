@@ -7,4 +7,5 @@ module RubyFish
   autoload :Jaro, 'rubyfish/jaro'
   autoload :JaroWinkler, 'rubyfish/jaro_winkler'
   autoload :DoubleMetaphone, 'rubyfish/double_metaphone'
+  autoload :MMatrix, 'rubyfish/mmatrix'
 end
