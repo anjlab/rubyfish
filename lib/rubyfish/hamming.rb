@@ -1,7 +1,13 @@
 module RubyFish::Hamming
-  def distance a, b
+  def distance a, b, opts={}
+    ignore_case = opts[:ignore_case]
     distance = 0
     as, bs = a.to_s, b.to_s
+    
+    if ignore_case
+    	as.downcase!
+    	bs.downcase!
+    end
 
     short, long = [as, bs].sort
 

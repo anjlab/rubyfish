@@ -3,9 +3,15 @@ module RubyFish::JaroWinkler
   def _distance a, b, opts = {}
     long_tolerance = opts[:long_tolerance]
     winklerize = opts[:winklerize]
+    ignore_case = opts[:ignore_case]
 
     as = a.to_s
     bs = b.to_s
+    
+    if ignore_case
+    	as.downcase!
+    	bs.downcase!
+    end
 
     as_length = as.size
     bs_length = bs.size
@@ -98,7 +104,7 @@ module RubyFish::JaroWinkler
   end
 
   def distance a, b, opts = {}
-    _distance(a, b, :winklerize => true)
+    _distance(a, b, :winklerize => true, :ignore_case => opts[:ignore_case])
   end
 
   module_function :distance
