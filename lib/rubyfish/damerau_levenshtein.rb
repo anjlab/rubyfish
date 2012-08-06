@@ -18,34 +18,36 @@ module RubyFish::DamerauLevenshtein
     rows = as.size + 1
     cols = bs.size + 1
 
-	curr = Array.new(cols) {|k| k}
-	prev = []
-
+    dist = [
+        Array.new(cols) {|k| k},
+        Array.new(cols) {0},
+        Array.new(cols) {0}
+    ]
+	
     (1...rows).each do |i|
-      allow_swaps ? tert = prev : nil
-      prev = curr
-      curr = Array.new(cols) {|k| k == 0 ? i : 0}
-      
+      k = i % 3
+      dist[k][0] = i
+
       (1...cols).each do |j|
         cost = as[i - 1] == bs[j - 1] ? 0 : 1
 
         #minimum of deletion, insertion, substitution
-        d1 = prev[j] + 1
-        d2 = curr[j - 1] + 1
-        d3 = prev[j - 1] + cost
+        d1 = dist[k - 1][j] + 1
+        d2 = dist[k][j - 1] + 1
+        d3 = dist[k - 1][j - 1] + cost
 
         d_now = [d1, d2, d3].min
 
         if allow_swaps && i > 2 && j > 2 && as[i - 1] == bs[j - 2] && as[i - 2] == bs[j - 1]
-          d1 = tert[j - 2] + cost
+          d1 = dist[k - 2][j - 2] + cost
           d_now = [d_now, d1].min;
         end
 
-        curr[j] = d_now;
+        dist[k][j] = d_now;
       end
     end
 
-    curr[-1]
+    dist[(rows - 1) % 3][-1]
   end
 
   def distance a, b, opts = {}
