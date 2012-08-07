@@ -8,8 +8,7 @@ RubyFish is a ruby port of python library <a href = "http://github.com/sunlightl
 RubyFish is a project of AnjLab (c) 2010.
 All code is released under a BSD-style license, see LICENSE for details.
 
-Originally written by
-Written by <a href="mailto:mstephens@sunlightfoundation.com">Michael Stephens</a> and <a href="mailto:jturk@sunlightfoundation.com">James Turk</a>.
+Originally written by <a href="mailto:mstephens@sunlightfoundation.com">Michael Stephens</a> and <a href="mailto:jturk@sunlightfoundation.com">James Turk</a>.
 
 Ported by <a href="mailto:yury.korolev@gmail.com">Yury Korolev</a>
 Source is available on <a href="http://github.com/anjlab/rubyfish">GitHub</a>
