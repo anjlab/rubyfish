@@ -1,10 +1,17 @@
 module RubyFish::LongestSubsequence
 
   # http://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_subsequence#Ruby
-  def distance a, b
+  def distance a, b, opts={}
+    ignore_case = opts[:ignore_case]
+    
     as = a.to_s
     bs = b.to_s
 
+    if ignore_case
+    	as.downcase!
+    	bs.downcase!
+    end
+    
     rows = as.size
     cols = bs.size
 
