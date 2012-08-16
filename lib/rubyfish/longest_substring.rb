@@ -1,9 +1,16 @@
 module RubyFish::LongestSubstring
 
   # http://en.wikibooks.org/wiki/Algorithm_implementation/Strings/Longest_common_substring#Ruby
-  def distance a, b
+  def distance a, b, opts={}
+  	ignore_case = opts[:ignore_case]
+  	
     as = a.to_s
     bs = b.to_s
+    
+    if ignore_case
+    	as.downcase!
+    	bs.downcase!
+    end
 
     rows = as.size
     cols = bs.size
@@ -29,9 +36,16 @@ module RubyFish::LongestSubstring
     ans
   end
 
-  def longest_substring a, b
+  def longest_substring a, b, opts={}
+  	ignore_case = opts[:ignore_case]
+  	
     as = a.to_s
     bs = b.to_s
+    
+    if ignore_case
+    	as.downcase!
+    	bs.downcase!
+    end
 
     rows = as.size
     cols = bs.size
@@ -70,8 +84,8 @@ module RubyFish::LongestSubstring
     res
   end
 
-  def longest_substring_index(a, b)
-    a.index(longest_substring(a, b))
+  def longest_substring_index(a, b, opts={})
+    a.index(longest_substring(a, b, :ignore_case => opts[:ignore_case]))
   end
 
   module_function :distance

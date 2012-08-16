@@ -1,21 +1,20 @@
-
 RubyFish
 =========
 
-RubyFish is a ruby port of python library jellyfish (http://github.com/sunlightlabs/jellyfish) for doing approximate and phonetic matching of strings.
+RubyFish is a ruby port of python library <a href = "http://github.com/sunlightlabs/jellyfish">jellyfish</a> for doing approximate and phonetic matching of strings.
+
+-------------
 
 RubyFish is a project of AnjLab (c) 2010.
 All code is released under a BSD-style license, see LICENSE for details.
 
-Originally written by
-Written by Michael Stephens <mstephens@sunlightfoundation.com> and James Turk
-<jturk@sunlightfoundation.com>.
+Originally written by <a href="mailto:mstephens@sunlightfoundation.com">Michael Stephens</a> and <a href="mailto:jturk@sunlightfoundation.com">James Turk</a>.
 
-Ported by Yury Korolev <yury.korolev@gmail.com>
-Source is available at http://github.com/anjlab/rubyfish
+Ported by <a href="mailto:yury.korolev@gmail.com">Yury Korolev</a>
+Source is available on <a href="http://github.com/anjlab/rubyfish">GitHub</a>
 
 Included Algorithms
-===================
+-------------------
 
 String comparison:
 
@@ -32,7 +31,7 @@ Phonetic encoding:
   * Double Metaphone
 
 Example Usage
-=============
+-------------
 
     ruby-1.9.2-p0 > require 'rubyfish'
     ruby-1.9.2-p0 > RubyFish::Levenshtein.distance("jellyfish", "rubyfish")
