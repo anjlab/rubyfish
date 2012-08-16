@@ -21,7 +21,7 @@ module RubyFish
           @_index = 0
           cases.each do |a, b, v|
             @_value = actual.distance(a, b)
-            @_value.should be_close(v, 0.001)
+            @_value.should be_within(0.001).of(v)
             @_index += 1
           end
         end
