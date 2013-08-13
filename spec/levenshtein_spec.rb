@@ -16,7 +16,9 @@ describe RubyFish::Levenshtein do
       ["abc", "", 3],
       ["bc", "abc", 1],
       ["kitten", "sitting", 3],
-      ["Saturday", "Sunday", 3]
+      ["Saturday", "Sunday", 3],
+      ["abc", "acb", 2],
+      ["abc", "bac", 2]
     ])
   end
 

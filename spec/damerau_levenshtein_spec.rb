@@ -14,7 +14,8 @@ describe RubyFish::DamerauLevenshtein do
       ["", "", 0],
       ["abc", "", 3],
       ["bc", "abc", 1],
-      ["abc", "acb", 1]
+      ["abc", "acb", 1],
+      ["abc", "bac", 1]
     ])
   end
 
