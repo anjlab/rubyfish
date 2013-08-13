@@ -38,7 +38,7 @@ module RubyFish::DamerauLevenshtein
 
         d_now = [d1, d2, d3].min
 
-        if allow_swaps && i > 2 && j > 2 && as[i - 1] == bs[j - 2] && as[i - 2] == bs[j - 1]
+        if allow_swaps && i > 1 && j > 1 && as[i - 1] == bs[j - 2] && as[i - 2] == bs[j - 1]
           d1 = dist[k - 2][j - 2] + cost
           d_now = [d_now, d1].min;
         end
